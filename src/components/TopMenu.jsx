@@ -3,7 +3,7 @@ import TopMenuLink from './TopMenuLink';
 
 function TopMenu() {
   return (
-    <div>
+    <div className="flex flex-row content-end">
       <TopMenuLink linkText="Gallery" />
       <TopMenuLink linkText="Blog" />
     </div>

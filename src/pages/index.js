@@ -1,14 +1,13 @@
 import * as React from 'react';
-import HeadingOne from '../components/HeadingOne';
-import TopMenu from '../components/TopMenu';
 import WorldMap from '../components/WorldMap';
-import '../styles/index.css';
+// import '../styles/index.css';
+import '../styles/global.css';
+import Header from '../components/Header';
 
 const IndexPage = () => {
   return (
-    <main>
-      <HeadingOne content="Barney's Travels" />
-      <TopMenu />
+    <main className="container py-8 mx-auto">
+      <Header />
       <WorldMap />
     </main>
   );
