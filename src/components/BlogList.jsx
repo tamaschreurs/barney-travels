@@ -4,7 +4,7 @@ import useBlogs from '../hooks/useBlogs';
 import BlogItem from './BlogItem';
 
 function BlogList() {
-  const blogPosts = useBlogs();
+  const { blogPosts } = useBlogs();
 
   return (
     <Section>
