@@ -1,0 +1,124 @@
+{
+    "albums": [
+        {
+            "id": 1,
+            "pictures": [
+                "https://picsum.photos/id/444",
+                "https://picsum.photos/id/359",
+                "https://picsum.photos/id/357",
+                "https://picsum.photos/id/772"
+            ],
+            "title": "Mountain Adventure",
+            "start_date": "20191026",
+            "end_date": "20191203"
+        },
+        {
+            "id": 2,
+            "pictures": [
+                "https://picsum.photos/id/360",
+                "https://picsum.photos/id/250",
+                "https://picsum.photos/id/458",
+                "https://picsum.photos/id/12"
+            ],
+            "title": "Urban Exploration",
+            "start_date": "20201101",
+            "end_date": "20201207"
+        },
+        {
+            "id": 3,
+            "pictures": [
+                "https://picsum.photos/id/324",
+                "https://picsum.photos/id/444",
+                "https://picsum.photos/id/28",
+                "https://picsum.photos/id/688"
+            ],
+            "title": "Seaside Getaway",
+            "start_date": "20240208",
+            "end_date": "20240307"
+        },
+        {
+            "id": 4,
+            "pictures": [
+                "https://picsum.photos/id/494",
+                "https://picsum.photos/id/165",
+                "https://picsum.photos/id/325",
+                "https://picsum.photos/id/886"
+            ],
+            "title": "Forest Retreat",
+            "start_date": "20210503",
+            "end_date": "20210521"
+        },
+        {
+            "id": 5,
+            "pictures": [
+                "https://picsum.photos/id/462",
+                "https://picsum.photos/id/419",
+                "https://picsum.photos/id/28",
+                "https://picsum.photos/id/62"
+            ],
+            "title": "Desert Voyage",
+            "start_date": "20191130",
+            "end_date": "20191201"
+        },
+        {
+            "id": 6,
+            "pictures": [
+                "https://picsum.photos/id/967",
+                "https://picsum.photos/id/729",
+                "https://picsum.photos/id/195",
+                "https://picsum.photos/id/564"
+            ],
+            "title": "Countryside Journey",
+            "start_date": "20150220",
+            "end_date": "20150301"
+        },
+        {
+            "id": 7,
+            "pictures": [
+                "https://picsum.photos/id/101",
+                "https://picsum.photos/id/321",
+                "https://picsum.photos/id/976",
+                "https://picsum.photos/id/440"
+            ],
+            "title": "Tropical Paradise",
+            "start_date": "20231219",
+            "end_date": "20231227"
+        },
+        {
+            "id": 8,
+            "pictures": [
+                "https://picsum.photos/id/973",
+                "https://picsum.photos/id/991",
+                "https://picsum.photos/id/896",
+                "https://picsum.photos/id/833"
+            ],
+            "title": "Winter Wonderland",
+            "start_date": "20150201",
+            "end_date": "20150216"
+        },
+        {
+            "id": 9,
+            "pictures": [
+                "https://picsum.photos/id/733",
+                "https://picsum.photos/id/153"
+            ],
+            "title": "Cultural Expedition",
+            "start_date": "20150721",
+            "end_date": "20150828"
+        },
+        {
+            "id": 10,
+            "pictures": [
+                "https://picsum.photos/id/522",
+                "https://picsum.photos/id/899",
+                "https://picsum.photos/id/518",
+                "https://picsum.photos/id/173",
+                "https://picsum.photos/id/509",
+                "https://picsum.photos/id/878"
+            ],
+            "title": "Mystery Tour",
+            "start_date": "20200130",
+            "end_date": "20200208"
+        }
+    ]
+}

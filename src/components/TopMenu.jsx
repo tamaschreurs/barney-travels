@@ -4,8 +4,9 @@ import TopMenuLink from './TopMenuLink';
 function TopMenu() {
   return (
     <div className="flex flex-row content-end">
-      <TopMenuLink linkText="Gallery" />
-      <TopMenuLink linkText="Blog" />
+      <TopMenuLink linkText="Home" to="/" />
+      <TopMenuLink linkText="Gallery" to="/gallery" />
+      <TopMenuLink linkText="Blog" to="/blog" />
     </div>
   );
 }

@@ -1,13 +1,16 @@
 import React from 'react';
-import HeadingOne from './HeadingOne';
+import SiteTitle from './SiteTitle';
 import TopMenu from './TopMenu';
+import Section from './Section';
 
 function Header() {
   return (
-    <div className="flex flex-row content-end justify-between max-w-screen-lg mx-auto">
-      <HeadingOne content="Barney's Travels" />
-      <TopMenu />
-    </div>
+    <Section>
+      <div className="flex flex-row content-end justify-between mx-auto pt-6 pb-4">
+        <SiteTitle content="Barney's Travels" />
+        <TopMenu />
+      </div>
+    </Section>
   );
 }
 

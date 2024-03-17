@@ -3,11 +3,13 @@ import React from 'react';
 
 function TopMenuLink({ to, linkText }) {
   return (
-    <div className="border-solid border-b-2 px-4 mx-2 pb-1 self-end">
-      <Link to={to} className="text-lg">
-        {linkText}
-      </Link>
-    </div>
+    <Link
+      to={to}
+      className="text-lg border-solid border-b-2 mx-2 self-end pb-1"
+      activeClassName="font-bold border-black"
+    >
+      <div className="px-4 self-end">{linkText}</div>
+    </Link>
   );
 }
 
