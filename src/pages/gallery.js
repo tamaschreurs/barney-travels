@@ -4,7 +4,7 @@ import GalleryList from '../components/GalleryList';
 
 function GalleryPage() {
   return (
-    <Page>
+    <Page title="Recent Albums">
       <GalleryList />
     </Page>
   );

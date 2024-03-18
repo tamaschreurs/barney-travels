@@ -1,8 +1,16 @@
 import React from 'react';
+import classNames from 'classnames';
 
-function Section({ children }) {
+function Section({ children, className }) {
   return (
-    <div className="container px-6 mx-auto max-w-screen-xl">{children}</div>
+    <div
+      className={classNames(
+        'container px-6 mx-auto max-w-screen-xl',
+        className
+      )}
+    >
+      {children}
+    </div>
   );
 }
 

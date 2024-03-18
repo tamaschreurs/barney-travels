@@ -1,10 +1,10 @@
 import React from 'react';
-import Page from '../components/Page';
-import BlogList from '../components/BlogList';
+import Page from '../../components/Page';
+import BlogList from '../../components/BlogList';
 
 function BlogPage() {
   return (
-    <Page>
+    <Page title="Recent Posts">
       <BlogList />
     </Page>
   );

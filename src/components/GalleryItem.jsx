@@ -28,7 +28,7 @@ function GalleryItem({
         }`}
         style={galleryItemStyle}
       >
-        <h2 className="text-xl font-light">{title}</h2>
+        <h3 className="text-xl font-light">{title}</h3>
       </div>
     );
   }
@@ -42,7 +42,8 @@ function GalleryItem({
     >
       <h2 className="text-xl ">{title}</h2>
       <span className="text-sm font-medium">
-        {count} photo{count > 1 ? 's' : ''} • {dateString}
+        {count} photo{count > 1 ? 's' : ''}
+        {dateString ? ` • ${dateString}` : ''}
       </span>
     </div>
   );

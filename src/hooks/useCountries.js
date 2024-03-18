@@ -16,9 +16,6 @@ const useCountries = (countryArray) => {
     countryString = countryString.slice(0, -1);
   }
 
-  console.log(countryArray);
-  console.log(countryString);
-
   const url = `https://restcountries.com/v3.1/alpha?fields=name${countryString}`;
 
   useEffect(() => {

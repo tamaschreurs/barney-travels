@@ -16,6 +16,7 @@ function BlogList() {
               key={post.id}
               id={post.id}
               title={post.title}
+              slug={post.slug}
               summary={post.content}
               albumIds={post.albums}
               countries={post.countries}

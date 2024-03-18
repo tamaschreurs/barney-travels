@@ -5,9 +5,12 @@ import classNames from 'classnames';
 import GalleryOverflow from './GalleryOverflow';
 import useDates from '../hooks/useDates';
 import useCountries from '../hooks/useCountries';
+import Markdown from 'react-markdown';
+import { Link } from 'gatsby';
 
 const BlogItem = ({
   title,
+  slug,
   summary,
   countries,
   albumIds,
@@ -42,13 +45,15 @@ const BlogItem = ({
   ));
 
   return (
-    <div className="flex flex-row border-solid border-b-2 my-4 py-2">
+    <div className="flex flex-row border-solid border-b-2 mb-6 py-2">
       <div className={classNames({ 'basis-8/12': relatedAlbums.length > 0 })}>
-        <h2 className="text-2xl font-light">{title}</h2>
+        <Link to={slug}>
+          <h2 className="text-2xl mb-2 underline">{title}</h2>
+        </Link>
         <div className="font-medium text-sm pb-1">
           {countryNames} • {ymdToDmy(publicationDate)}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: summary }}></div>
+        <Markdown className="line-clamp-4">{summary}</Markdown>
       </div>
       {relatedGalleries}
       {hasOverflow && (
