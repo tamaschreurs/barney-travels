@@ -29,7 +29,7 @@ function BlogPost({ params }) {
   const markdownFormatting = {
     h2(props) {
       const { node, ...rest } = props;
-      return <h2 className="font-bold text-lg mb-1" {...rest} />;
+      return <h2 className="font-bold text-lg mb-1" {...rest} />; // eslint-disable-line
     },
     p(props) {
       const { node, ...rest } = props;
@@ -68,6 +68,8 @@ function BlogPost({ params }) {
                       ? album.pictures[album.featured]
                       : album.pictures[0]
                   }
+                  slug={album.slug}
+                  albumId={album.id}
                 />
               ))}
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import Page from '../components/Page';
-import GalleryList from '../components/GalleryList';
+import Page from '../../components/Page';
+import GalleryList from '../../components/GalleryList';
 
 function GalleryPage() {
   return (

@@ -8,6 +8,19 @@ const useAlbums = () => {
     return bDate - aDate;
   });
 
+  sortedAlbums.forEach((album) => {
+    album.slug = album.title
+      .toLowerCase()
+      .replace(/[^\w ]+/g, '')
+      .replace(/ +/g, '-');
+  });
+
+  const getAlbumBySlug = (slug) => {
+    const foundAlbum = sortedAlbums.find((album) => album.slug === slug);
+
+    return foundAlbum;
+  };
+
   const getAlbumsById = (albumIds) => {
     const filteredAlbums = sortedAlbums.filter((album) =>
       albumIds.includes(album.id)
@@ -16,7 +29,7 @@ const useAlbums = () => {
     return filteredAlbums;
   };
 
-  return { all: sortedAlbums, getAlbumsById };
+  return { all: sortedAlbums, getAlbumsById, getAlbumBySlug };
 };
 
 export default useAlbums;
