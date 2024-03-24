@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Page from '../../components/Page';
 import useAlbums from '../../hooks/useAlbums';
 import Section from '../../components/Section';
 import { navigate } from 'gatsby';
-import fjGallery from 'flickr-justified-gallery';
 
 import LightGallery from 'lightgallery/react';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
@@ -17,19 +16,14 @@ import 'lightgallery/css/lg-thumbnail.css';
 import 'lightgallery/css/lg-autoplay.css';
 import '../../styles/customLightGallery.css';
 
+import '../../styles/imageGallery.css';
+
+const thumbnailSizes = ['600/400', '400/600'];
+
 function GalleryItemPage({ params }) {
   const { getAlbumBySlug } = useAlbums();
 
   const foundAlbum = getAlbumBySlug(params.slug);
-
-  useEffect(() => {
-    fjGallery(document.querySelectorAll('.gallery'), {
-      itemSelector: '.gallery-item',
-      rowHeight: 250,
-      gutter: 8,
-      rowHeightTolerance: 0.1,
-    });
-  }, [foundAlbum]);
 
   if (!foundAlbum) {
     navigate('/404', { replace: true });
@@ -51,7 +45,12 @@ function GalleryItemPage({ params }) {
               className="gallery-item"
               key={picture}
             >
-              <img src={`${picture}/600/400`} alt="" />
+              <img
+                src={`${picture}/${
+                  thumbnailSizes[Math.floor(Math.random() * 2)]
+                }`}
+                alt=""
+              />
             </a>
           ))}
         </LightGallery>
