@@ -1,49 +1,27 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import * as React from 'react';
+import { Link } from 'gatsby';
+import Page from '../components/Page';
+import Section from '../components/Section';
+import lostTraveller from '../images/lost_traveller_transparent.webp';
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+    <Page title={'Page not found'}>
+      <Section className="py-6 items-center">
+        <p className="mb-3 text-center">
+          The page you're trying to access could not be found. Perhaps it is
+          time to return{' '}
+          <Link to="/" className="font-bold underline">
+            home
+          </Link>
+          ?
+        </p>
+        <img src={lostTraveller} className="w-2/3 mx-auto mb-4 mt-10" />
+      </Section>
+    </Page>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>Page not found - Barney's Travels</title>;

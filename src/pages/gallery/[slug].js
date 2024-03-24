@@ -26,7 +26,9 @@ function GalleryItemPage({ params }) {
   const foundAlbum = getAlbumBySlug(params.slug);
 
   if (!foundAlbum) {
-    navigate('/404', { replace: true });
+    if (typeof window !== 'undefined') {
+      navigate('/404', { replace: true });
+    }
     return;
   }
 
@@ -66,5 +68,5 @@ export const Head = ({ params }) => {
 
   const foundAlbum = getAlbumBySlug(params.slug);
 
-  return <title>{foundAlbum.title} - Barney's Travels</title>;
+  return <title>{foundAlbum?.title} - Barney's Travels</title>;
 };

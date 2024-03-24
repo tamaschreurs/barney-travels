@@ -19,7 +19,9 @@ function BlogPost({ params }) {
   const { countryData } = useCountries(foundPost?.countries);
 
   if (!foundPost) {
-    navigate('/404', { replace: true });
+    if (typeof window !== 'undefined') {
+      navigate('/404', { replace: true });
+    }
     return;
   }
 
