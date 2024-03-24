@@ -17,5 +17,16 @@ module.exports = {
       },
       __key: 'pages',
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: "Barney's Travels",
+        start_url: '/',
+        backgrond_color: '#e2e8f0',
+        display: 'standalone',
+        //Icon source: https://www.svgrepo.com/svg/437961/navigator-2
+        icon: 'src/images/icon.png',
+      },
+    },
   ],
 };

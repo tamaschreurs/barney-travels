@@ -17,6 +17,7 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "gatsby": "^5.13.3",
+    "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "lightgallery": "^2.7.2",
     "react": "^18.2.0",

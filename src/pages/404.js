@@ -16,7 +16,11 @@ const NotFoundPage = () => {
           </Link>
           ?
         </p>
-        <img src={lostTraveller} className="w-2/3 mx-auto mb-4 mt-10" />
+        <img
+          src={lostTraveller}
+          className="w-2/3 mx-auto mb-4 mt-10"
+          alt="a sketch of a lost traveller in the mountains"
+        />
       </Section>
     </Page>
   );
