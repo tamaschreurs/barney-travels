@@ -20,6 +20,19 @@ const useBlogs = () => {
     return foundPost;
   };
 
+  const getPostsByCountries = (countryArray) => {
+    const relevantPosts = blogPosts.filter((post) => {
+      for (const country of post.countries) {
+        if (countryArray.includes(country)) {
+          return true;
+        }
+      }
+      return false;
+    });
+
+    return relevantPosts;
+  };
+
   const countriesVisited = blogPosts.reduce((countryArray, post) => {
     let addedCountries = [];
     post.countries.forEach((country) => {
@@ -30,7 +43,7 @@ const useBlogs = () => {
     return [...countryArray, ...addedCountries];
   }, []);
 
-  return { blogPosts, countriesVisited, getPostBySlug };
+  return { blogPosts, countriesVisited, getPostBySlug, getPostsByCountries };
 };
 
 export default useBlogs;

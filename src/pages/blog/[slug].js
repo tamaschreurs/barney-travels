@@ -16,7 +16,7 @@ function BlogPost({ params }) {
 
   const foundPost = getPostBySlug(params.slug);
 
-  const { nameString: countryNames } = useCountries(foundPost?.countries);
+  const { countryData } = useCountries(foundPost?.countries);
 
   if (!foundPost) {
     navigate('/404', { replace: true });
@@ -44,7 +44,12 @@ function BlogPost({ params }) {
   return (
     <Page
       title={foundPost.title}
-      subtitle={`${countryNames}  • ${ymdToDmy(foundPost.publication_date)}`}
+      subtitle={
+        <>
+          <CountryLinks countryData={countryData} />
+          {` • ${ymdToDmy(foundPost.publication_date)}`}
+        </>
+      }
     >
       <Section className="py-6 max-w-screen-lg">
         <div className="flex flex-row gap-8">
@@ -80,8 +85,6 @@ function BlogPost({ params }) {
   );
 }
 
-export default BlogPost;
-
 export const Head = ({ params }) => {
   const { getPostBySlug } = useBlogs();
 
@@ -89,3 +92,22 @@ export const Head = ({ params }) => {
 
   return <title>{foundPost?.title} - Barney's Travels</title>;
 };
+
+function CountryLinks({ countryData }) {
+  return (
+    <span>
+      {countryData.map((country, i) => {
+        return (
+          <>
+            {i !== 0 && ', '}
+            <a href={`/blog?country=${country.ccn3}`} className="underline">
+              {country.name.common}
+            </a>
+          </>
+        );
+      })}
+    </span>
+  );
+}
+
+export default BlogPost;

@@ -1,11 +1,8 @@
 import React from 'react';
 import Section from './Section';
-import useBlogs from '../hooks/useBlogs';
 import BlogItem from './BlogItem';
 
-function BlogList() {
-  const { blogPosts } = useBlogs();
-
+function BlogList({ blogPosts }) {
   return (
     <Section>
       <div className="flex flex-col py-8">
