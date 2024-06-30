@@ -55,7 +55,7 @@ function BlogPost({ params }) {
     >
       <Section className="py-6 max-w-screen-lg">
         <div className="flex flex-row gap-8">
-          <div className={hasRelatedAlbums && 'basis-2/3'}>
+          <div className={hasRelatedAlbums ? 'basis-2/3' : undefined}>
             <Markdown components={markdownFormatting}>
               {foundPost.content}
             </Markdown>
@@ -100,12 +100,12 @@ function CountryLinks({ countryData }) {
     <span>
       {countryData.map((country, i) => {
         return (
-          <>
+          <span key={country.ccn3}>
             {i !== 0 && ', '}
             <a href={`/blog?country=${country.ccn3}`} className="underline">
               {country.name.common}
             </a>
-          </>
+          </span>
         );
       })}
     </span>
