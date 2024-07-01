@@ -1,0 +1,9 @@
+div.tooltip {
+  background-color: #222222dd;
+  padding: 0.4em 0.8em;
+  border-radius: 10px;
+}
+
+canvas.clickable {
+  cursor: default !important;
+}
