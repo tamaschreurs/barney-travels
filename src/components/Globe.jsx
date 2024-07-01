@@ -11,6 +11,9 @@ import '../styles/globe.css';
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
+    if (typeof window === 'undefined') {
+      return [null, null];
+    }
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight]);
     }
