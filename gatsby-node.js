@@ -4,7 +4,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /three-conic-polygon-geometry/,
+            test: /globe\.gl/,
             use: loaders.null(),
           },
         ],
