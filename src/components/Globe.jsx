@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import GlobeGL from 'react-globe.gl';
 import mapData from '../custom.geo.json';
 import useBlogs from '../hooks/useBlogs';
 import { navigate } from 'gatsby';
+// import loadable from '@loadable/component';
+
+import GlobeGL from 'react-globe.gl';
 
 import '../styles/globe.css';
 
@@ -55,6 +57,12 @@ function Globe() {
   //   });
   //   return borders;
   // }
+
+  if (typeof window === 'undefined') {
+    return <div>Windowless!</div>;
+  }
+
+  console.log('We found a window');
 
   return (
     <div style={{ cursor: cursorStyle }} className={'blogCountry'}>
